@@ -1,0 +1,20 @@
+<!--<app-first-component *ngFor="let something of stringArray"></app-first-component>-->
+<div class="container text-center">
+    <p>TESTING</p>
+    <input type="number" class="form-control" [(ngModel)]="selectedNumber" placeholder="Enter a number">
+    <button type="button" class="btn btn-primary" (click)="submit()">Submit Number</button>
+    <br>
+    <br>
+    <p>
+        {{ result }}
+    </p>
+    <div class="row mt-5">
+        <div class="col">
+            <app-first-component [numberFromParent]="finalNumber"
+                (resultToParent)="storeResults($event)"></app-first-component>
+        </div>
+        <div class="col">
+            <app-second-component [valueFromParent]="result"></app-second-component>
+        </div>
+    </div>
+</div>
