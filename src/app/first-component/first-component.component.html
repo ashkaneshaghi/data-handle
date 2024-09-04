@@ -10,5 +10,13 @@
     <p>
         {{ numberFromParent }}
     </p>
-
+    <hr>
+    <br>
+    <br>
+    <input type="text" class="form-control" [(ngModel)]="message" placeholder="Enter your message">
+    <button type="button" class="btn btn-primary" (click)="sendMessage()">Send</button>
+    <br>
+    <p>
+        {{ message }}
+    </p>
 </div>
